@@ -43,6 +43,7 @@ class App extends Component {
             return acc;
         }, []);
         console.log(options);
+        console.log(this.state.states)
         return options;
     }
 
