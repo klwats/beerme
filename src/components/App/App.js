@@ -67,7 +67,7 @@ class App extends Component {
             <main>
                 <Header />
                 {/* <Home /> */}
-                <Dropdown placeholder="Select..." getOptions={this.getOptions} selectOption={this.selectOption} />
+                <Dropdown getOptions={this.getOptions} selectOption={this.selectOption} />
             </main>
             //     </Route>
             //     <Route exact path="/states/:state">

@@ -2,14 +2,11 @@ import React from 'react';
 import './Dropdown.css';
 
 
-
-
 const Dropdown = ({ selectOption, getOptions }) => {
 
     const handleChange = (e) => {
         selectOption(e.target.value)
     }
-
 
     return (
         <main className='dropdown-container'>
@@ -27,20 +24,6 @@ const Dropdown = ({ selectOption, getOptions }) => {
         </main>
 
 
-
-        // <div className="dropdown-container">
-        //     <div className="dropdown-input">
-        //         {/* <div className="dropdown-selected-value">{getDisplay()}</div> */}
-        //         <div className="dropdown-menu">{options}</div>
-
-
-        //         <div className="dropdown-tools">
-        //             <div className="dropdown-tool">
-        //                 <Icon />
-        //             </div>
-        //         </div>
-        //     </div>
-        // </div>
     );
 };
 
