@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Header from '../Header/Header'
 import Home from '../Home/Home'
 //import State from '../State/State'
-import ErrorPage from '../ErrorPage/ErrorPage'
+// import ErrorPage from '../ErrorPage/ErrorPage'
 import { Route, Switch } from 'react-router-dom'
 import { fetchStates } from '../API/apiCalls';
 
@@ -74,9 +74,9 @@ class App extends Component {
                         {/* <State /> */}
                     </main>
                 </Route>
-                <Route exact path="/error">
-                    <ErrorPage />
-                </Route>
+                {/* <Route exact path="/error"> */}
+                {/* <ErrorPage /> */}
+                {/* </Route> */}
             </Switch >)
     }
 

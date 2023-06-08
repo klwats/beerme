@@ -36,8 +36,9 @@ class DropDown extends Component {
             .catch((err) => {
                 throw new Error('Error')
             })
-        console.log(this.state.breweries)
     }
+
+
 
 
     render() {
