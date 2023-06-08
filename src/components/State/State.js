@@ -6,7 +6,6 @@ import { fetchIndState } from '../API/apiCalls'
 const State = () => {
     const { state } = useParams();
     const [breweriesList, setBreweriesList] = useState([]);
-    console.log(breweriesList)
     const getStateBreweries = useCallback(async () => {
         const data = await fetchIndState(state);
         setBreweriesList(data);
@@ -19,6 +18,7 @@ const State = () => {
         return (
             <section>
                 <h2>{brewery.name}</h2>
+                <p>{brewery.city}</p>
             </section>
         )
     })

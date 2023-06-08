@@ -8,49 +8,23 @@ class DropDown extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            //indState: '',
-            //states: [],
-            breweries: []
+            indState: ''
         }
     }
 
     handleChange = (e) => {
         this.setState({ indState: e.target.value }
-            // , () => {
-            //     this.props.getInfo()
-            // }
         )
     }
 
     selectState = (event) => {
-        //event.preventDefault();
         this.setState({ stateBreweries: this.props.getInfo() })
     }
 
-    // getInfo = () => {
-    //     const state = this.state.indState;
-    //     console.log(state)
-    //     fetchIndState(state).then((data) => {
-    //         this.setState({ breweries: data })
-    //         console.log(data)
-    //     })
-    //         .catch((err) => {
-    //             throw new Error('Error')
-    //         })
-    // }
-
-
-
-
 
     render() {
-        // console.log(this.state.indState)
-        // console.log(this.state.breweries)
         const options = this.props.getOptions();
 
-        // const breweriesList = this.state.breweries.map((brewery, index) => (
-        //     <option key={index} value={brewery.name}>{brewery.name}</option>
-        //));
         return (
             <main className='dropdown-container' >
                 <div>
@@ -65,13 +39,9 @@ class DropDown extends Component {
                                 <option key={index} value={option}>{option}</option>
                             ))}
                         </select>
-
                     </form>
                 </div>
-                {/* <div>{breweriesList}</div> */}
             </main >
-
-
         );
     };
 }
