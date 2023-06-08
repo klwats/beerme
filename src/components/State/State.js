@@ -1,41 +1,12 @@
-// import React, { Component } from 'react';
-// import { fetchIndState } from '../API/apiCalls'
-// import './State.css';
+import React from 'react';
+//import '.State.css'
 
-// class State extends Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             breweries: []
-//         }
-//     }
+const State = (props) => {
+    return (
+        <div className="State">
+            <h1>{props.state}</h1>
+        </div>
+    )
+}
 
-//     componentDidMount() {
-//         const { state } = this.props.match.params;
-//         fetchIndState(state)
-//             .then((data) => {
-//                 this.setState({ breweries: data });
-//             })
-//             .catch((err) => {
-//                 console.error('Error:', err);
-//             });
-//     }
-
-//     render() {
-//         const { state } = this.props.match.params;
-//         const breweriesList = this.state.breweries.map((brewery) => (
-//             <div key={brewery.id}>{brewery.name}</div>
-//         ));
-
-//         return (
-//             <div>
-//                 <h2>Breweries in {state}</h2>
-//                 {breweriesList}
-//             </div>
-//         );
-//     }
-// }
-
-
-
-// export default State;
+export default State;

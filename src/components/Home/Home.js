@@ -6,6 +6,7 @@ const Home = ({ getOptions }) => {
     return (
         <section className="home-page">
             <DropDown getOptions={getOptions} />
+
         </section>
     )
 }
