@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import Dropdown from '../Dropdown/Dropdown'
+//import Dropdown from '../Dropdown/Dropdown'
 import Header from '../Header/Header'
 import Home from '../Home/Home'
 //import State from '../State/State'
-//import ErrorPage from '../ErrorPage/ErrorPage'
-//import { Route, Switch } from 'react-router-dom'
+// import ErrorPage from '../ErrorPage/ErrorPage'
+import { Route, Switch } from 'react-router-dom'
 import { fetchStates } from '../API/apiCalls';
 
 
@@ -43,13 +43,14 @@ class App extends Component {
             return acc;
         }, []);
         console.log(options);
+        console.log(this.state.states)
         return options;
     }
 
-    selectOption = (option) => {
-        this.setState({ selectedState: option });
+    // selectOption = (option) => {
+    //     this.setState({ selectedState: option });
 
-    }
+    // }
 
     //render header (component) with title as navlink
 
@@ -60,35 +61,23 @@ class App extends Component {
 
     render() {
         return (
-
-
-            // <Switch>
-            //<Route exact path="/">
-            <main>
-                <Header />
-                {/* <Home /> */}
-                <Dropdown placeholder="Select..." getOptions={this.getOptions} selectOption={this.selectOption} />
-            </main>
-            //     </Route>
-            //     <Route exact path="/states/:state">
-            //         <main>
-            //             <Header />
-            //             <State />
-            //         </main>
-            //     </Route>
-            //     <Route exact path='/drink/:id' render={({ match }) => (
-            //         <main>
-            //             <Header />
-            //             {/* <DrinkDetails id={match.params.id} /> */}
-            //         </main>
-
-            //     )} />
-
-            //     <Route exact path="/error">
-            //         <ErrorPage />
-            //     </Route>
-            // </Switch >
-        )
+            <Switch>
+                <Route exact path="/">
+                    <main>
+                        <Header />
+                        <Home getOptions={this.getOptions} />
+                    </main>
+                </Route>
+                <Route exact path='/states/:state'>
+                    <main>
+                        <Header />
+                        {/* <State /> */}
+                    </main>
+                </Route>
+                {/* <Route exact path="/error"> */}
+                {/* <ErrorPage /> */}
+                {/* </Route> */}
+            </Switch >)
     }
 
 }

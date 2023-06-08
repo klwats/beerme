@@ -8,5 +8,15 @@ const fetchStates = async () => {
     };
 };
 
+const fetchIndState = async (state) => {
+    const response = await fetch(`https://api.openbrewerydb.org/v1/breweries?by_state=${state}`);
+    if (response.ok) {
+        return (await response.json());
 
-export { fetchStates }
+    } else {
+        throw new Error(`Please try again there is an error. code: ${response.status}`)
+    };
+};
+
+
+export { fetchStates, fetchIndState }
