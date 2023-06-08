@@ -1,41 +1,34 @@
-// import React, { Component } from 'react';
-// import { fetchIndState } from '../API/apiCalls'
-// import './State.css';
+import React, { useState, useEffect, useCallback } from 'react';
+import { useParams } from 'react-router-dom';
+import { fetchIndState } from '../API/apiCalls'
+//import '.State.css'
 
-// class State extends Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             breweries: []
-//         }
-//     }
+const State = () => {
+    const { state } = useParams();
+    const [breweriesList, setBreweriesList] = useState([]);
+    console.log(breweriesList)
+    const getStateBreweries = useCallback(async () => {
+        const data = await fetchIndState(state);
+        setBreweriesList(data);
+    }, [state])
+    useEffect(() => {
+        getStateBreweries();
+    }, [getStateBreweries])
 
-//     componentDidMount() {
-//         const { state } = this.props.match.params;
-//         fetchIndState(state)
-//             .then((data) => {
-//                 this.setState({ breweries: data });
-//             })
-//             .catch((err) => {
-//                 console.error('Error:', err);
-//             });
-//     }
+    const breweryNames = breweriesList.map(brewery => {
+        return (
+            <section>
+                <h2>{brewery.name}</h2>
+            </section>
+        )
+    })
 
-//     render() {
-//         const { state } = this.props.match.params;
-//         const breweriesList = this.state.breweries.map((brewery) => (
-//             <div key={brewery.id}>{brewery.name}</div>
-//         ));
-
-//         return (
-//             <div>
-//                 <h2>Breweries in {state}</h2>
-//                 {breweriesList}
-//             </div>
-//         );
-//     }
-// }
+    return (
+        <div>
+            {breweryNames}
+        </div>
+    )
+}
 
 
-
-// export default State;
+export default State;

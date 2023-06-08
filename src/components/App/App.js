@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 //import Dropdown from '../Dropdown/Dropdown'
 import Header from '../Header/Header'
 import Home from '../Home/Home'
-//import State from '../State/State'
+import State from '../State/State'
 // import ErrorPage from '../ErrorPage/ErrorPage'
 import { Route, Switch } from 'react-router-dom'
-import { fetchStates } from '../API/apiCalls';
+import { fetchStates, fetchIndState } from '../API/apiCalls';
 
 
 class App extends Component {
@@ -14,13 +14,13 @@ class App extends Component {
         this.state = {
             error: false,
             states: [],
-            selectedState: ''
+            indState: '',
+            stateBreweries: []
         }
     }
 
     componentDidMount() {
         this.getStates();
-
     }
 
     getStates = () => {
@@ -28,7 +28,7 @@ class App extends Component {
             this.setState({
                 states: data
             })
-            console.log(this.state.states)
+            // console.log(this.state.states)
         })
             .catch(error => {
                 throw new Error('error');
@@ -42,15 +42,21 @@ class App extends Component {
             }
             return acc;
         }, []);
-        console.log(options);
-        console.log(this.state.states)
         return options;
     }
 
-    // selectOption = (option) => {
-    //     this.setState({ selectedState: option });
+    getInfo = () => {
+        const state = this.state.indState;
+        fetchIndState(state).then((data) => {
+            this.setState({ stateBreweries: data })
+            console.log(data)
+            console.log(this.state.stateBreweries)
+        })
+            .catch((err) => {
+                throw new Error('Error')
+            })
+    }
 
-    // }
 
     //render header (component) with title as navlink
 
@@ -65,15 +71,23 @@ class App extends Component {
                 <Route exact path="/">
                     <main>
                         <Header />
-                        <Home getOptions={this.getOptions} />
+                        <Home getOptions={this.getOptions} getInfo={this.getInfo} />
                     </main>
                 </Route>
-                <Route exact path='/states/:state'>
-                    <main>
-                        <Header />
-                        {/* <State /> */}
-                    </main>
+                <Route
+                    exact path='/breweries/:state'>
+                    <State />
                 </Route>
+
+
+                {/* //         <main>
+                //             <Header />
+                //             <State state={match.params.state} stateBreweries={this.state.stateBreweries} />
+                //         </main>
+                //     )}
+                // /> */}
+
+                {/* // </Route> */}
                 {/* <Route exact path="/error"> */}
                 {/* <ErrorPage /> */}
                 {/* </Route> */}

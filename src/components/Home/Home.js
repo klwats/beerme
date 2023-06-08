@@ -2,10 +2,11 @@ import React from 'react';
 import './Home.css';
 import DropDown from '../DropDown/DropDown';
 
-const Home = ({ getOptions }) => {
+const Home = ({ getOptions, getInfo }) => {
     return (
         <section className="home-page">
-            <DropDown getOptions={getOptions} />
+            <DropDown getOptions={getOptions} getInfo={getInfo} />
+
         </section>
     )
 }
