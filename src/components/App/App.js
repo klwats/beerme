@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-//import Dropdown from '../Dropdown/Dropdown'
 import Header from '../Header/Header'
 import Home from '../Home/Home'
 import State from '../State/State'
@@ -14,7 +13,6 @@ class App extends Component {
         this.state = {
             error: false,
             states: [],
-            indState: '',
             stateBreweries: []
         }
     }
@@ -28,7 +26,6 @@ class App extends Component {
             this.setState({
                 states: data
             })
-            // console.log(this.state.states)
         })
             .catch(error => {
                 throw new Error('error');
@@ -49,8 +46,6 @@ class App extends Component {
         const state = this.state.indState;
         fetchIndState(state).then((data) => {
             this.setState({ stateBreweries: data })
-            console.log(data)
-            console.log(this.state.stateBreweries)
         })
             .catch((err) => {
                 throw new Error('Error')
@@ -61,7 +56,6 @@ class App extends Component {
     //render header (component) with title as navlink
 
     //router to home page
-    //router to state page
     //router to error page
 
 
@@ -76,16 +70,9 @@ class App extends Component {
                 </Route>
                 <Route
                     exact path='/breweries/:state'>
+                    <Header />
                     <State />
                 </Route>
-
-
-                {/* //         <main>
-                //             <Header />
-                //             <State state={match.params.state} stateBreweries={this.state.stateBreweries} />
-                //         </main>
-                //     )}
-                // /> */}
 
                 {/* // </Route> */}
                 {/* <Route exact path="/error"> */}

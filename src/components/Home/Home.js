@@ -6,7 +6,6 @@ const Home = ({ getOptions, getInfo }) => {
     return (
         <section className="home-page">
             <DropDown getOptions={getOptions} getInfo={getInfo} />
-
         </section>
     )
 }
