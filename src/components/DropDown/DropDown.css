@@ -1,26 +1,30 @@
-.dropdown-container {
-    text-align: left;
-    border: 1px solid #ccc;
-    position: relative;
-    border-radius: 5px;
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    color: #255631;
+    font-family: ITC Avant Garde Gothic Pro;
 }
 
-.dropdown-input {
-    padding: 5px;
+/* .submit {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    user-select: none;
+    font-size: 20px;
+
+} */
+
+.dropdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
 }
 
 .dropdown-menu {
-    position: absolute;
-    transform: translateY(4px);
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    overflow: auto;
-    max-height: 150px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
 }

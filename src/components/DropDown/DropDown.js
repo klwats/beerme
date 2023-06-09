@@ -28,17 +28,17 @@ class DropDown extends Component {
         return (
             <main className='dropdown-container' >
                 <div>
-                    <h1>Select a State</h1>
+                    <h1 className="title">Where We Drinkin?</h1>
                     <form>
-                        <Link id="link" to={`/breweries/${this.state.indState}`}>
-                            <button onClick={event => this.selectState(event)}>SUBMIT</button>
-                        </Link>
                         <select className="dropdown-menu" name="states" id="states" onChange={this.handleChange}>
                             <option value='' defaultValue>Select Your State</option>
                             {options.map((option, index) => (
                                 <option key={index} value={option}>{option}</option>
                             ))}
                         </select>
+                        <Link id="link" to={`/breweries/${this.state.indState}`}>
+                            <button className='submit' onClick={event => this.selectState(event)}>SUBMIT</button>
+                        </Link>
                     </form>
                 </div>
             </main >

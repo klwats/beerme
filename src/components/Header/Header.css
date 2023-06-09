@@ -1,5 +1,18 @@
 .header {
     display: flex;
     justify-content: center;
+    align-items: center;
+    /* background-color: green; */
+    height: 30vh;
+    background-image: url(https://cdn.dribbble.com/userupload/4399168/file/original-8d87ad56fad7eec0280e51a906335c34.jpg?compress=1&resize=752x);
+    background-size: cover;
+    background-position: center;
+    font-family: ITC Avant Garde Gothic Pro;
+    font-size: 40px;
+    color: white;
+}
 
+.header-link {
+    color: white;
+    text-decoration: none;
 }
