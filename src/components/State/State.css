@@ -1,0 +1,17 @@
+.breweries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.brewery-box {
+    border: 1px solid #255631;
+    padding: 10px;
+
+}
+
+.info {
+    text-align: center;
+    color: #255631;
+    font-family: ITC Avant Garde Gothic Pro;
+}
