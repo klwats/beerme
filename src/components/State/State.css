@@ -15,3 +15,11 @@
     color: #255631;
     font-family: ITC Avant Garde Gothic Pro;
 }
+
+.state-header {
+    text-align: center;
+    font-family: ITC Avant Garde Gothic Pro;
+    font-weight: bold;
+    font-size: 20px;
+
+}
