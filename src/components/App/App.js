@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Header from '../Header/Header'
 import Home from '../Home/Home'
 import State from '../State/State'
-// import ErrorPage from '../ErrorPage/ErrorPage'
+import ErrorPage from '../ErrorPage/ErrorPage'
 import { Route, Switch } from 'react-router-dom'
 import { fetchStates, fetchIndState } from '../API/apiCalls';
 
@@ -28,6 +28,7 @@ class App extends Component {
             })
         })
             .catch(error => {
+                this.setState({ error: true })
                 throw new Error('error');
             });
     }
@@ -48,39 +49,40 @@ class App extends Component {
             this.setState({ stateBreweries: data })
         })
             .catch((err) => {
+                this.setState({ error: true })
                 throw new Error('Error')
             })
     }
 
-
-    //render header (component) with title as navlink
-
-    //router to home page
     //router to error page
 
 
     render() {
-        return (
-            <Switch>
-                <Route exact path="/">
-                    <main>
+        if (this.state.error) {
+            return (<ErrorPage error={this.state.error} />)
+        } else {
+            return (
+                <Switch>
+                    <Route exact path="/">
+                        <main>
+                            <Header />
+                            <Home getOptions={this.getOptions} getInfo={this.getInfo} />
+                        </main>
+                    </Route>
+                    <Route
+                        exact path='/breweries/:state'>
                         <Header />
-                        <Home getOptions={this.getOptions} getInfo={this.getInfo} />
-                    </main>
-                </Route>
-                <Route
-                    exact path='/breweries/:state'>
-                    <Header />
-                    <State />
-                </Route>
+                        <State />
+                    </Route>
+                    <Route exact path="/error">
+                        <ErrorPage />
+                    </Route>
+                    <Route path="*" render={() => <ErrorPage />} />
 
-                {/* // </Route> */}
-                {/* <Route exact path="/error"> */}
-                {/* <ErrorPage /> */}
-                {/* </Route> */}
-            </Switch >)
+
+                </Switch >)
+        }
     }
-
 }
 
 
