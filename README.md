@@ -49,3 +49,11 @@ I still need to work on breaking down each task to very specific work tickets to
   - [W3Schools](https://www.w3schools.com/)
   - [React Docs](https://reactjs.org/docs/getting-started.html)
   - [Cypress Docs](https://docs.cypress.io/guides/overview/why-cypress.html)
+
+
+https://github.com/klwats/beerme/assets/115050167/5e06bfc6-be10-467b-b967-ec8a8509c510
+
+
+
+https://github.com/klwats/beerme/assets/115050167/e7513016-f96d-4175-9dc8-6539e6e2089d
+
