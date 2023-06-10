@@ -22,3 +22,26 @@ This was a solo project completed by myself in 5 days.
 
 ## Project Specification
 [Project Spec and Rubric](https://frontend.turing.edu/projects/module-3/showcase.html)
+
+## Learning Goals/Evolution of Project/Reflections
+My goal for this project was to design and build an app from beginning to end and using React and Router. I wanted to make sure at the end of the project I had a better understanding of how React works and feel more comfortable with how information is passed between components
+
+I started by finding an API that I felt I would be able to use effectively. I then designed an app using Figma to wireframe and GitHub projects to break down the tasks involved. Since I only had five days to complete this project, each morning I came up with a very specific gameplan as to what I needed to accomplish that day and how much time to set aside for each task.
+
+I still need to work on breaking down each task to very specific work tickets to prevent myself from getting overwhelmed. I do feel that I gained a much better understanding of how to time block for tasks though. Overall, I am proud of what I was able to accomplish, given the time constraints.
+
+## Set Up
+### Option 1: Visit the Deployed Site
+Here.
+### Option 2: Installing the Repository Locally
+1. Fork the following repository to your GitHub account: (https://github.com/klwats/beerme)
+1. Copy SSH key on GitHub inside the code dropdown.
+1. Using the terminal, run git clone.
+1. cd into the repository.
+1. Open the repository in your text editor.
+1. Run npm install
+1. Run npm start
+1. Click the hyperlink where the project is running to launch the application in the web browser, or enter http://localhost:3000/ into your web browser. -->
+
+
+README includes a gif of the application
