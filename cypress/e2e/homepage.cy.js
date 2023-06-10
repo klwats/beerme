@@ -38,7 +38,6 @@ describe("Home Page", () => {
   });
 
   it("should render the home page", () => {
-
     cy.get(".header-link").should("contain", "BeerMe");
     cy.get(".title").should("contain", "Where We Drinkin?");
     cy.get(".submit").should("exist")
@@ -58,6 +57,4 @@ describe("Home Page", () => {
     cy.url().should("include", "/breweries/Colorado");
     cy.contains("h1", "Colorado");
   })
-
-
 })

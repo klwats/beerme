@@ -23,14 +23,12 @@ class App extends Component {
 
     getStates = () => {
         fetchStates().then((data) => {
-            console.log(data);
             this.setState({
                 states: data
             })
         })
             .catch(error => {
                 this.setState({ error: true })
-                //throw new Error('error');
             });
     }
 
@@ -52,12 +50,9 @@ class App extends Component {
             })
                 .catch((err) => {
                     this.setState({ error: true })
-                    //throw new Error('Error')
                 })
         }
     }
-
-
 
     render() {
         if (this.state.error) {
@@ -80,13 +75,10 @@ class App extends Component {
                         <ErrorPage />
                     </Route>
                     <Route path="*" render={() => <ErrorPage />} />
-
-
                 </Switch >)
         }
     }
 }
-
 
 
 
