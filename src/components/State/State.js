@@ -41,8 +41,6 @@ const State = () => {
             </section>
         );
     });
-
-
     return (
 
         <>
