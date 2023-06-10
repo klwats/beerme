@@ -42,6 +42,7 @@ describe("State specific page", () => {
     cy.wait("@breweries")
     cy.url().should("include", "/breweries/Colorado");
     cy.contains("h1", "Colorado");
+    cy.contains("h1", "BeerMe")
   }
   )
 

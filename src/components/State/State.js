@@ -9,6 +9,7 @@ const State = () => {
     const [errorMsg, setErrorMsg] = useState("");
 
     const getStateBreweries = useCallback(async () => {
+
         try {
             const data = await fetchIndState(state);
             setBreweriesList(data);
