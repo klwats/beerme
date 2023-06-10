@@ -1,0 +1,19 @@
+[
+    {
+        "name": "10 Barrel Brewing",
+        "street": "2620 Walnut St",
+        "city": "Denver"
+    },
+    {
+        "name": "105 West Brewing Co",
+        "street": "1043 Park St",
+        "city": "Castle Rock",
+        "website_url": "http://www.105westbrewing.com/"
+    },
+    {
+        "name": "12 Degree Brewing",
+        "street": "820 Main St",
+        "city": "Louisville",
+        "website_url": "http://www.12degree.com/"
+    }
+]
