@@ -32,7 +32,7 @@ I still need to work on breaking down each task to very specific work tickets to
 
 ## Set Up
 ### Option 1: Visit the Deployed Site
-Here.
+(https://beerme-2a0ku0rfd-klwats.vercel.app/breweries/Oregon)
 ### Option 2: Installing the Repository Locally
 1. Fork the following repository to your GitHub account: (https://github.com/klwats/beerme)
 1. Copy SSH key on GitHub inside the code dropdown.
@@ -44,4 +44,8 @@ Here.
 1. Click the hyperlink where the project is running to launch the application in the web browser, or enter http://localhost:3000/ into your web browser. -->
 
 
-README includes a gif of the application
+## Sources
+  - [MDN](http://developer.mozilla.org/en-US/)
+  - [W3Schools](https://www.w3schools.com/)
+  - [React Docs](https://reactjs.org/docs/getting-started.html)
+  - [Cypress Docs](https://docs.cypress.io/guides/overview/why-cypress.html)
