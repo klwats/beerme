@@ -7,7 +7,6 @@ const Header = () => {
         <div className="header">
             <NavLink to="/" className='header-link'>
                 <h1>BeerMe</h1>
-
             </NavLink>
         </div>
     )

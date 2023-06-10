@@ -21,12 +21,23 @@ describe("Home Page", () => {
           },
         ],
       },
-    );
-    cy.visit("localhost:3000");
-  })
+    ).as("states");
+
+    cy.fixture("Colorado.json")
+      .as("breweries")
+    cy.intercept(
+      "GET",
+      "https://api.openbrewerydb.org/v1/breweries?by_state=Colorado",
+      {
+        statusCode: 200,
+        fixture: "Colorado.json"
+      }
+    )
+      .as("breweries");
+    cy.visit("localhost:3000")
+  });
 
   it("should render the home page", () => {
-
     cy.get(".header-link").should("contain", "BeerMe");
     cy.get(".title").should("contain", "Where We Drinkin?");
     cy.get(".submit").should("exist")
@@ -41,11 +52,9 @@ describe("Home Page", () => {
   });
 
   it("should allow users to select a state", () => {
-    cy.get("#states").select("Oregon");
+    cy.get("#states").select("Colorado");
     cy.get(".submit").click();
-    cy.url().should("include", "/breweries/Oregon");
-    cy.contains("h1", "Oregon");
+    cy.url().should("include", "/breweries/Colorado");
+    cy.contains("h1", "Colorado");
   })
-
-
 })

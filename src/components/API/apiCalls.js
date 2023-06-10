@@ -18,5 +18,4 @@ const fetchIndState = async (state) => {
 }
 
 
-
 export { fetchStates, fetchIndState }
