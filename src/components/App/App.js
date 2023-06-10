@@ -30,7 +30,7 @@ class App extends Component {
         })
             .catch(error => {
                 this.setState({ error: true })
-                throw new Error('error');
+                //throw new Error('error');
             });
     }
 
@@ -52,7 +52,7 @@ class App extends Component {
             })
                 .catch((err) => {
                     this.setState({ error: true })
-                    throw new Error('Error')
+                    //throw new Error('Error')
                 })
         }
     }
@@ -61,7 +61,7 @@ class App extends Component {
 
     render() {
         if (this.state.error) {
-            return (<ErrorPage error={this.state.error} />)
+            return (<ErrorPage message={'Server error.'} />)
         } else {
             return (
                 <Switch>
@@ -76,7 +76,7 @@ class App extends Component {
                         <Header />
                         <State />
                     </Route>
-                    <Route exact path="/error">
+                    <Route exact path="/error" render={() => <ErrorPage />}>
                         <ErrorPage />
                     </Route>
                     <Route path="*" render={() => <ErrorPage />} />
