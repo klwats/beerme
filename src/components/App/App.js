@@ -23,6 +23,7 @@ class App extends Component {
 
     getStates = () => {
         fetchStates().then((data) => {
+            console.log(data);
             this.setState({
                 states: data
             })
@@ -54,7 +55,6 @@ class App extends Component {
             })
     }
 
-    //router to error page
 
 
     render() {

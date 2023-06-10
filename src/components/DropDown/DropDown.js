@@ -19,6 +19,7 @@ class DropDown extends Component {
 
     selectState = (event) => {
         this.setState({ stateBreweries: this.props.getInfo() })
+
     }
 
 
