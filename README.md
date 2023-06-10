@@ -1,4 +1,4 @@
-<!-- # BeerMe
+# BeerMe
 ## Abstract
 BeerMe is a brewery app that presents the user with the ability to search for breweries by state, to see a given brewery's city, address, and website. 
 
