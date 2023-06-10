@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, Link, Redirect } from 'react-router-dom';
 import { fetchIndState } from '../API/apiCalls'
 import './State.css'
+import propTypes from 'prop-types';
 
 const State = () => {
     const { state } = useParams();
@@ -65,3 +66,7 @@ const State = () => {
 
 
 export default State;
+
+State.propTypes = {
+    state: propTypes.string.isRequired
+}

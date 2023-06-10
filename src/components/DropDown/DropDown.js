@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './DropDown.css';
 import { fetchIndState } from '../API/apiCalls'
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { fetchStates } from '../API/apiCalls'
 
 class DropDown extends Component {
@@ -49,3 +50,8 @@ class DropDown extends Component {
 
 
 export default DropDown;
+
+DropDown.propTypes = {
+    getInfo: PropTypes.func.isRequired,
+    getOptions: PropTypes.func.isRequired
+}

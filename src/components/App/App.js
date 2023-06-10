@@ -46,13 +46,15 @@ class App extends Component {
 
     getInfo = () => {
         const state = this.state.indState;
-        fetchIndState(state).then((data) => {
-            this.setState({ stateBreweries: data })
-        })
-            .catch((err) => {
-                this.setState({ error: true })
-                throw new Error('Error')
+        if (state) {
+            fetchIndState(state).then((data) => {
+                this.setState({ stateBreweries: data })
             })
+                .catch((err) => {
+                    this.setState({ error: true })
+                    throw new Error('Error')
+                })
+        }
     }
 
 
