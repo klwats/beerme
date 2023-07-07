@@ -32,7 +32,7 @@ I still need to work on breaking down each task to very specific work tickets to
 
 ## Set Up
 ### Option 1: Visit the Deployed Site
-(https://beerme-2a0ku0rfd-klwats.vercel.app/breweries/)
+(https://beerme-2a0ku0rfd-klwats.vercel.app)
 ### Option 2: Installing the Repository Locally
 1. Fork the following repository to your GitHub account: (https://github.com/klwats/beerme)
 1. Copy SSH key on GitHub inside the code dropdown.
